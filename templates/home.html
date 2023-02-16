@@ -8,9 +8,21 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-        <h1>This is home page</h1>
+        
     </head>
     <body>
+        <h1 class="text-center my-2">My All Members</h1>
+        <div class="container my-2">
+            {% for item in all %}
+            <div class="row">
+                <div class="col">{{item.name}} </div>
+                <div class="col">{{item.email}}</div>
+                <div class="col">{{item.contact}}</div>
+                <div class="col">{{item.city}}</div>
+            </div>
+        {% endfor %}
+        </div>
+        
         <script src="" async defer></script>
     </body>
 </html>
